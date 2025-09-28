@@ -1,9 +1,5 @@
 import { useState, useEffect } from "react";
-import { Github, ExternalLink, Code, Database , Server, Eye, Star } from "lucide-react";
-
-import posImage from "../../src/assets/image_1.png";
-import mentalHealthImage from "../assets/mental_health_care.png";
-import licenseImage from "../assets/license.png";
+import { Github, ExternalLink, Code, Database, Server, Eye, Star } from "lucide-react";
 
 interface ProjectStats {
     stars: number;
@@ -24,7 +20,11 @@ interface Project {
     stats: ProjectStats;
 }
 
-const Projects = () => {
+interface ProjectsProps {
+    onViewAllProjects?: () => void;
+}
+
+const Projects: React.FC<ProjectsProps> = ({ onViewAllProjects }) => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -45,13 +45,23 @@ const Projects = () => {
         return () => observer.disconnect();
     }, []);
 
+    const handleViewAllProjects = () => {
+        const allProjectsSection = document.getElementById('allprojects');
+        if (allProjectsSection) {
+            allProjectsSection.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start' 
+            });
+        }
+    };
+
     const projects: Project[] = [
         {
             title: "Modern POS System",
-            description: "A comprehensive Point of Sale system built with JSP, Jakartha EE , and Hibernate. Features real-time inventory management, customer tracking, and detailed analytics.",
+            description: "A comprehensive Point of Sale system built with JSP, Jakarta EE, and Hibernate. Features real-time inventory management, customer tracking, and detailed analytics.",
             longDescription: "This advanced POS system revolutionizes retail operations with its intuitive interface and powerful backend. Built with modern technologies, it offers seamless transaction processing, comprehensive reporting, and multi-user support.",
-            image: posImage,
-            technologies: ["JSP", "Jakartha EE", "Hibernate" , "Java Script" , "CSS"],
+            image: "", // Using Code icon instead
+            technologies: ["JSP", "Jakarta EE", "Hibernate", "JavaScript", "CSS"],
             github: "https://github.com/Anjana-Hesh/Point-Of-Sales-System-JSP-.git",
             live: "#",
             category: "Full Stack",
@@ -62,8 +72,8 @@ const Projects = () => {
             title: "Mental Health Care",
             description: "A comprehensive healthcare management system using JavaFX and Hibernate. Streamlines patient management, appointment scheduling, and therapy session tracking.",
             longDescription: "An all-in-one healthcare solution that digitizes therapy practice management. Features patient records, treatment plans, appointment scheduling, and detailed progress tracking with beautiful visualizations.",
-            image: mentalHealthImage,
-            technologies: ["JavaFX", "Hibernate", "MySQL", "Java", "JasperReports" , "HTML" , "CSS" , "Java Script"],
+            image: "",
+            technologies: ["JavaFX", "Hibernate", "MySQL", "Java", "JasperReports", "HTML", "CSS", "JavaScript"],
             github: "https://github.com/Anjana-Hesh/ORM-Course-Work-Final.git",
             live: "#",
             category: "Desktop App",
@@ -72,10 +82,10 @@ const Projects = () => {
         },
         {
             title: "Smart Reg Web Application",
-            description: "A modern, responsive LICENSE MANAGEMENT SYSTEM showcasing advanced animations, dark mode, and interactive elements. Built with Java Spring boot and modern CSS techniques.",
+            description: "A modern, responsive LICENSE MANAGEMENT SYSTEM showcasing advanced animations, dark mode, and interactive elements. Built with Java Spring Boot and modern CSS techniques.",
             longDescription: "This cutting-edge License Management System demonstrates modern web development skills with stunning animations, responsive design, and optimal performance. Features dynamic content, smooth transitions, and engaging user interactions.",
-            image: licenseImage,
-            technologies: ["HTML", "JavaScript", "CSS (BootStrap)", "Java With Spring Boot" , "Hibernate" , "Spring Security"],
+            image: "",
+            technologies: ["HTML", "JavaScript", "CSS (Bootstrap)", "Java With Spring Boot", "Hibernate", "Spring Security"],
             github: "https://github.com/Anjana-Hesh/SmartReg.git",
             live: "https://youtu.be/nmYbd46a9ho?si=65lsLzk2dE7ngbwU",
             category: "Full Stack",
@@ -95,7 +105,6 @@ const Projects = () => {
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-6">
-           
                 <div className={`text-center mb-20 transition-all duration-1000 ${
                     isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}>
@@ -238,19 +247,18 @@ const Projects = () => {
                     ))}
                 </div>
 
+                {/* View More Projects Button - Now scrolls to AllProjects section */}
                 <div className={`text-center mt-16 transition-all duration-1000 delay-1000 ${
                     isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}>
-                    <a
-                        href="https://github.com/Anjana-Hesh"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <button
+                        onClick={onViewAllProjects}
                         className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/50"
                     >
                         <Github size={20} />
                         View More Projects
                         <ExternalLink size={16} />
-                    </a>
+                    </button>
                 </div>
             </div>
         </section>
