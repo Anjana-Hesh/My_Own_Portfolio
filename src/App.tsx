@@ -6,16 +6,17 @@ import Projects from './components/Projects';
 import Service from './components/Service';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Allprojects from './components/AllProjects';
 
 const App: FC = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [isLoading, setIsLoading] = useState(true);
     const [activeSection, setActiveSection] = useState('home');
+     const [showAllProjects, setShowAllProjects] = useState(false);
     const sectionsRef = useRef<(HTMLElement | null)[]>([]);
     
-    // Components and IDs list
-    const sections = [Hero, About, Projects, Service, Contact];
-    const sectionIds = ["home", "about", "projects", "services" , "contact"];
+    const sections = [Hero, About, Projects, Service, Contact ];
+    const sectionIds = ["home", "about", "projects", "services" , "contact" ];
 
     useEffect(() => {
         const handleMouseMove = (e: MouseEvent) => {
@@ -23,7 +24,7 @@ const App: FC = () => {
         };
         window.addEventListener('mousemove', handleMouseMove);
 
-        const timer = setTimeout(() => setIsLoading(false), 1500); // Shorter loading time
+        const timer = setTimeout(() => setIsLoading(false), 1500);
 
         return () => {
             window.removeEventListener('mousemove', handleMouseMove);
@@ -48,7 +49,7 @@ const App: FC = () => {
             (entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        // Ensure only valid section IDs are set
+                      
                         if (sectionIds.includes(entry.target.id)) {
                              setActiveSection(entry.target.id);
                         }
@@ -76,6 +77,15 @@ const App: FC = () => {
         };
     }, [sectionIds]);
 
+        const handleShowAllProjects = () => {
+            setShowAllProjects(true);
+        };
+
+    const handleBackToProjects = () => {
+        setShowAllProjects(false);
+        setActiveSection('projects');
+    };
+
     if (isLoading) {
         return (
             <div className="fixed inset-0 bg-black flex items-center justify-center z-50">
@@ -87,16 +97,20 @@ const App: FC = () => {
         );
     }
 
+     if (showAllProjects) {
+        return <Allprojects onBackToProjects={handleBackToProjects} />;
+    }
+
     return (
         <div className="bg-black text-white min-h-screen font-inter">
         
-            <div 
+            {/* <div 
                 className="fixed w-6 h-6 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full pointer-events-none z-50 mix-blend-difference transition-transform duration-100 ease-out hidden md:block"
                 style={{
                     left: `${mousePosition.x - 12}px`,
                     top: `${mousePosition.y - 12}px`,
                 }}
-            />
+            /> */}
 
             <div className="fixed inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob"></div>
@@ -117,7 +131,11 @@ const App: FC = () => {
                             }}
                             className="scroll-section min-h-screen flex items-center justify-center bg-gray-950" 
                         >
-                            <Component />
+                            {Component === Projects ? (
+                                <Component onViewAllProjects={handleShowAllProjects} />
+                            ) : (
+                                <Component />
+                            )}
                         </section>
                     ))}
                 </main>

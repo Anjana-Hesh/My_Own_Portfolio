@@ -1,9 +1,6 @@
-// src/components/About.tsx
+import { useState, useEffect } from "react";
+import { Code, Database, Globe, Server, Zap, type LucideIcon } from "lucide-react";
 
-import { useState, useEffect } from "react"; // Added FC for better type definition
-import { Code, Database, Globe, Server, Zap, type LucideIcon } from "lucide-react"; // Added LucideIcon type
-
-// Define the type for skill objects for better type safety
 interface Skill {
     name: string;
     level: number;
@@ -11,7 +8,6 @@ interface Skill {
     color: string;
 }
 
-// Define the type for experience objects
 interface Experience {
     title: string;
     description: string;
@@ -20,19 +16,19 @@ interface Experience {
 
 const About = () => {
     const [isVisible, setIsVisible] = useState(false);
-    // FIX: Set type to number | null, as it will hold the index (number) or null
+  
     const [hoveredSkill, setHoveredSkill] = useState<number | null>(null); 
 
     useEffect(() => {
-        // Find the section element by its ID
+   
         const section = document.getElementById('about');
         
         const observer = new IntersectionObserver(
             ([entry]) => {
-                // Trigger visibility only once when it intersects
+  
                 if (entry.isIntersecting) {
                     setIsVisible(true);
-                    // Disconnect after triggering to optimize performance
+
                     observer.disconnect();
                 }
             },
@@ -43,9 +39,8 @@ const About = () => {
             observer.observe(section);
         }
 
-        // Cleanup function
         return () => {
-            if (section) observer.unobserve(section); // Ensure observer is cleaned up
+            if (section) observer.unobserve(section);
             observer.disconnect();
         };
     }, []);
@@ -84,14 +79,14 @@ const About = () => {
             id="about"
             className="relative min-h-screen py-20 overflow-hidden"
         >
-            {/* Background Elements */}
+      
             <div className="absolute inset-0">
                 <div className="absolute top-1/4 right-1/4 w-72 h-72 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-full blur-3xl"></div>
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-6">
-                {/* Section Header */}
+    
                 <div className={`text-center mb-20 transition-all duration-1000 ${
                     isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}>
@@ -106,7 +101,7 @@ const About = () => {
                 </div>
 
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
-                    {/* Left Side - Bio */}
+                   
                     <div className={`space-y-8 transition-all duration-1000 delay-300 ${
                         isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
                     }`}>
@@ -130,7 +125,6 @@ const About = () => {
                             </div>
                         </div>
 
-                        {/* Experience Cards */}
                         <div className="space-y-4">
                             {experiences.map((exp, index) => (
                                 <div
@@ -138,7 +132,7 @@ const About = () => {
                                     className="group p-6 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl rounded-xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-purple-500/20"
                                 >
                                     <div className="flex items-start space-x-4">
-                                        {/* Use exp.icon as Component */}
+                   
                                         <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg group-hover:scale-110 transition-transform duration-300">
                                             <exp.icon size={24} className="text-white" />
                                         </div>
@@ -152,7 +146,6 @@ const About = () => {
                         </div>
                     </div>
 
-                    {/* Right Side - Skills */}
                     <div className={`transition-all duration-1000 delay-500 ${
                         isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
                     }`}>
@@ -197,7 +190,6 @@ const About = () => {
                                 ))}
                             </div>
 
-                            {/* Stats */}
                             <div className="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-white/10">
                                 <div className="text-center">
                                     <div className="text-2xl font-bold text-purple-400 mb-1">2+</div>

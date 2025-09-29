@@ -64,7 +64,7 @@ export default function Footer() {
   return (
     <>
       <footer className="relative bg-gradient-to-b from-gray-900 to-black text-white overflow-hidden">
-        {/* Background Elements */}
+
         <div className="absolute inset-0">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-purple-600/5 to-pink-600/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gradient-to-r from-blue-600/5 to-cyan-600/5 rounded-full blur-3xl"></div>
@@ -72,8 +72,7 @@ export default function Footer() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-16">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-            
-            {/* Brand Section */}
+
             <div className="lg:col-span-2 space-y-6">
               <div>
                 <h3 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
@@ -85,7 +84,6 @@ export default function Footer() {
                 </p>
               </div>
 
-              {/* Contact Info */}
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors duration-300">
                   <Mail size={18} />
@@ -97,7 +95,6 @@ export default function Footer() {
                 </div>
               </div>
 
-              {/* Social Links */}
               <div>
                 <h4 className="text-lg font-semibold mb-4">Connect With Me</h4>
                 <div className="flex space-x-4">
@@ -117,7 +114,6 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Quick Links */}
             <div>
               <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
               <ul className="space-y-3">
@@ -134,7 +130,6 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Skills */}
             <div>
               <h4 className="text-lg font-semibold mb-6">Technologies</h4>
               <div className="flex flex-wrap gap-2">
@@ -150,10 +145,8 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Divider */}
           <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent mb-8"></div>
 
-          {/* Bottom Section */}
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex items-center space-x-2 text-gray-400">
               <span>© {currentYear} U. Anjana Heshan. Made with</span>
@@ -173,11 +166,9 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Decorative Elements */}
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-purple-500/50 via-pink-500/50 to-purple-500/50"></div>
       </footer>
 
-      {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
         className={`fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-lg hover:shadow-xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-110 ${
