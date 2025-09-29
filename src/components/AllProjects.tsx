@@ -98,10 +98,10 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
             id: 4,
             title: "E-Commerce Platform",
             description: "Full-featured online shopping platform with user authentication, product catalog, shopping cart, and payment integration.",
-            technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe API"],
-            github: "https://github.com/Anjana-Hesh/ecommerce-platform",
+            technologies: ["HTML", "CSS", "JS"],
+            github: "https://github.com/Anjana-Hesh/E-Commerce-Site.git",
             live: "#",
-            category: "Full Stack",
+            category: "FrontEnd",
             color: "from-orange-500 to-red-500",
             stats: { stars: 67, forks: 34, commits: 234, lastUpdated: "2024-03-05" },
             featured: false,
@@ -109,12 +109,12 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
         },
         {
             id: 5,
-            title: "Task Management App",
-            description: "Collaborative task management application with real-time updates, team collaboration features, and project tracking.",
-            technologies: ["Vue.js", "Firebase", "Tailwind CSS", "Vuex"],
-            github: "https://github.com/Anjana-Hesh/task-manager",
+            title: "High-Way Bus seat booking (Quick Seat)",
+            description: "Collaborative booking , team collaboration features, and project tracking. and high-way bus seat booking platform with many features like , visibility of seats , payment plans (Monthly , Weekly , daily) , discounts , e-mail updates , real time traking but location .....",
+            technologies: ["React-Native"],
+            github: "https://github.com/Anjana-Hesh/Quick_Seats_Front-End.git",
             live: "#",
-            category: "Web App",
+            category: "Mobile App Front End",
             color: "from-indigo-500 to-purple-500",
             stats: { stars: 23, forks: 11, commits: 123, lastUpdated: "2023-11-18" },
             featured: false,
@@ -122,12 +122,12 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
         },
         {
             id: 6,
-            title: "Weather Dashboard",
-            description: "Beautiful weather dashboard with location-based forecasts, interactive maps, and weather alerts.",
-            technologies: ["React", "TypeScript", "OpenWeather API", "Chart.js"],
-            github: "https://github.com/Anjana-Hesh/weather-dashboard",
+            title: "Constructor Management System (Layered)",
+            description: "A building construction management system , Add a project with ingreadiant like soil , sement , swips , ... and the components like shovel , Hoe , Pans ... and more features",
+            technologies: ["Java fx", "java", "Layered Architecture", "Hibernate"],
+            github: "https://github.com/Anjana-Hesh/Apex-Building-solution.git",
             live: "#",
-            category: "Web App",
+            category: "Desktop Application",
             color: "from-blue-400 to-blue-600",
             stats: { stars: 19, forks: 8, commits: 67, lastUpdated: "2023-10-22" },
             featured: false,
@@ -135,10 +135,10 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
         },
         {
             id: 7,
-            title: "Inventory Management System",
-            description: "Desktop application for managing inventory, suppliers, and purchase orders with barcode scanning capabilities.",
-            technologies: ["Java Swing", "SQLite", "Apache POI", "ZXing"],
-            github: "https://github.com/Anjana-Hesh/inventory-management",
+            title: "Constructor Management System (MVC)",
+            description: "A building construction management system , Add a project with ingreadiant like soil , sement , swips , ... and the components like shovel , Hoe , Pans ... and more features",
+            technologies: ["Java fx", "java", "MVC Architecture", "My-SQL"],
+            github: "https://github.com/Anjana-Hesh/Apex-Solution.git",
             live: "#",
             category: "Desktop App",
             color: "from-gray-500 to-gray-700",
@@ -148,10 +148,10 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
         },
         {
             id: 8,
-            title: "Blog Platform",
-            description: "Modern blog platform with markdown support, comment system, and social sharing features.",
-            technologies: ["Next.js", "Prisma", "PostgreSQL", "NextAuth"],
-            github: "https://github.com/Anjana-Hesh/blog-platform",
+            title: "Complaint Management System (CMS)",
+            description: "Modern CMS platform with markdown support with re-mark, complaint add , edit , delete with simple crud, and staff managing to the addmin and the employees can send a complaint and addmin can resolve it with a re-mark.",
+            technologies: ["JSP", "Jakarta EE", "Hibernate", "JavaScript", "CSS"],
+            github: "https://github.com/Anjana-Hesh/CMS-----Java-EE-Assignment.git",
             live: "#",
             category: "Full Stack",
             color: "from-teal-500 to-green-500",
@@ -163,8 +163,8 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
             id: 9,
             title: "Chat Application",
             description: "Real-time chat application with multiple rooms, file sharing, and emoji support using WebSocket technology.",
-            technologies: ["Socket.io", "Node.js", "React", "MongoDB"],
-            github: "https://github.com/Anjana-Hesh/chat-app",
+            technologies: ["Socket.io", "Java", "Java FX"],
+            github: "https://github.com/Anjana-Hesh/Complete-Chat-Application.git",
             live: "#",
             category: "Web App",
             color: "from-pink-500 to-rose-500",
@@ -175,17 +175,17 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
         {
             id: 10,
             title: "Portfolio Website",
-            description: "Personal portfolio website with interactive animations, project showcase, and contact form.",
+            description: "Personal portfolio website with interactive animations, project showcase, and contact form with Singal page Application.",
             technologies: ["React", "Framer Motion", "Tailwind CSS", "EmailJS"],
-            github: "https://github.com/Anjana-Hesh/portfolio",
+            github: "https://github.com/Anjana-Hesh/My_Own_Portfolio.git",
             live: "#",
-            category: "Web App",
+            category: "Web Site",
             color: "from-violet-500 to-purple-500",
             stats: { stars: 26, forks: 13, commits: 89, lastUpdated: "2024-02-20" },
             featured: false,
             year: 2024
         }
-        // Add more projects as needed...
+        
     ];
 
     const categories = ["All", "Full Stack", "Web App", "Desktop App", "Mobile App"];
@@ -218,7 +218,7 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900">
-            {/* Background Effects */}
+         
             <div className="fixed inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -226,7 +226,7 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-6 py-12">
-                {/* Header */}
+          
                 <div className={`mb-12 transition-all duration-1000 ${
                     isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}>
@@ -247,11 +247,10 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
                     </p>
                 </div>
 
-                {/* Filters */}
                 <div className={`mb-12 space-y-6 transition-all duration-1000 delay-200 ${
                     isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}>
-                    {/* Search */}
+            
                     <div className="relative max-w-md">
                         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
                         <input
@@ -263,7 +262,6 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
                         />
                     </div>
 
-                    {/* Filter Controls */}
                     <div className="flex flex-wrap gap-4">
                         <div className="flex items-center gap-2">
                             <Filter size={16} className="text-gray-400" />
@@ -312,7 +310,6 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
                     </div>
                 </div>
 
-                {/* Projects Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {sortedProjects.map((project, index) => (
                         <div
@@ -323,19 +320,17 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
                             style={{ transitionDelay: `${Math.min(index * 100, 1000)}ms` }}
                         >
                             <div className="relative h-full bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-500/20">
-                                {/* Featured Badge */}
+                           
                                 {project.featured && (
                                     <div className="absolute -top-2 -right-2 px-3 py-1 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-semibold rounded-full">
                                         FEATURED
                                     </div>
                                 )}
-
-                                {/* Project Icon */}
+            
                                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${project.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500`}>
                                     <Code size={24} className="text-white" />
                                 </div>
 
-                                {/* Category & Stats */}
                                 <div className="flex items-center justify-between mb-3">
                                     <span className={`px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${project.color} text-white`}>
                                         {project.category}
@@ -346,7 +341,6 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
                                     </div>
                                 </div>
 
-                                {/* Title & Description */}
                                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
                                     {project.title}
                                 </h3>
@@ -354,7 +348,6 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
                                     {project.description}
                                 </p>
 
-                                {/* Technologies */}
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     {project.technologies.slice(0, 3).map((tech, techIndex) => (
                                         <span
@@ -371,7 +364,6 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
                                     )}
                                 </div>
 
-                                {/* Project Stats */}
                                 <div className="flex items-center justify-between text-xs text-gray-400 mb-4">
                                     <div className="flex items-center gap-3">
                                         <div className="flex items-center gap-1">
@@ -386,7 +378,6 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
                                     <span className="text-xs">{project.year}</span>
                                 </div>
 
-                                {/* Action Buttons */}
                                 <div className="flex gap-3 mt-auto">
                                     <a
                                         href={project.github}
@@ -412,7 +403,6 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
                     ))}
                 </div>
 
-                {/* Empty State */}
                 {sortedProjects.length === 0 && (
                     <div className="text-center py-20">
                         <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 opacity-50">
@@ -423,7 +413,6 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
                     </div>
                 )}
 
-                {/* Footer */}
                 <div className="text-center mt-20 pt-12 border-t border-white/10">
                     <div className="mb-8">
                         <h3 className="text-2xl font-bold text-white mb-4">Want to collaborate?</h3>

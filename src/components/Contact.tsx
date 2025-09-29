@@ -12,14 +12,12 @@ import {
     MessageSquare
 } from "lucide-react";
 
-// --- Type Definitions for TypeScript ---
 interface FormDataState {
     name: string;
     email: string;
     message: string;
 }
 
-// Define possible icon types for links/info
 type LucideIcon = typeof Mail | typeof Phone | typeof Linkedin | typeof Github | typeof Facebook | typeof Instagram | typeof Youtube | typeof MapPin;
 
 interface SocialLink {
@@ -37,12 +35,10 @@ interface ContactInfoItem {
     description: string;
     color: string;
 }
-// ----------------------------------------
 
-// Custom Message Toast component to replace alert()
 const MessageToast: FC <{ message: string; onClose: () => void }> = ({ message, onClose }) => {
     useEffect(() => {
-        // Auto-hide the toast after 5 seconds
+       
         const timer = setTimeout(onClose, 5000);
         return () => clearTimeout(timer);
     }, [onClose]);
@@ -68,7 +64,6 @@ const MessageToast: FC <{ message: string; onClose: () => void }> = ({ message, 
 const Contact: FC = () => {
     const [isVisible, setIsVisible] = useState(false);
     
-    // Explicitly type the form data state
     const [formData, setFormData] = useState<FormDataState>({
         name: "",
         email: "",
@@ -77,10 +72,8 @@ const Contact: FC = () => {
     
     const [isSubmitting, setIsSubmitting] = useState(false);
     
-    // Explicitly type the hovered social link state
     const [hoveredSocial, setHoveredSocial] = useState<number | null>(null);
     
-    // New state for custom success message
     const [toastMessage, setToastMessage] = useState<string | null>(null);
 
 
@@ -101,7 +94,6 @@ const Contact: FC = () => {
         }
     }, []);
 
-    // Type the event as a change event for input/textarea elements
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({
             ...formData,
@@ -109,23 +101,19 @@ const Contact: FC = () => {
         });
     };
 
-    // Type the event as a form event
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
 
-        // Simulated API call delay
         setTimeout(() => {
             setIsSubmitting(false);
             setFormData({ name: "", email: "", message: "" });
             
-            // Replaced alert() with custom message toast
             setToastMessage("Message sent successfully! 🎉 I'll be in touch soon.");
 
         }, 2000);
     };
 
-    // Explicitly type the social links array
     const socialLinks: SocialLink[] = [
         { Icon: Linkedin, href: "https://www.linkedin.com/in/anjana-heshan-79334b260/", color: "from-blue-600 to-blue-700", hoverColor: "hover:shadow-blue-500/50", name: "LinkedIn" },
         { Icon: Github, href: "https://github.com/Anjana-Hesh", color: "from-gray-700 to-gray-800", hoverColor: "hover:shadow-gray-500/50", name: "GitHub" },
@@ -134,7 +122,6 @@ const Contact: FC = () => {
         { Icon: Youtube, href: "https://www.youtube.com/@anjanaheshan3994", color: "from-red-500 to-red-600", hoverColor: "hover:shadow-red-500/50", name: "YouTube" }
     ];
 
-    // Explicitly type the contact info array
     const contactInfo: ContactInfoItem[] = [
         { icon: Phone, title: "Phone", content: "+94 764 810 851", description: "Available Mon-Fri, 9AM-6PM", color: "from-green-500 to-green-600" },
         { icon: Mail, title: "Email", content: "anjanaheshan676@gmail.com", description: "I'll respond within 24 hours", color: "from-purple-500 to-purple-600" },
@@ -143,14 +130,14 @@ const Contact: FC = () => {
 
     return (
         <section id="contact" className="relative min-h-screen py-20 overflow-hidden">
-            {/* Background Elements */}
+          
             <div className="absolute inset-0">
                 <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-blue-600/10 to-cyan-600/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-6">
-                {/* Section Header */}
+         
                 <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                     <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                         Let's Connect
@@ -162,7 +149,7 @@ const Contact: FC = () => {
                 </div>
 
                 <div className="grid lg:grid-cols-2 gap-16">
-                    {/* Left Side - Contact Info */}
+               
                     <div className={`space-y-8 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
                         {contactInfo.map((info, index) => (
                             <div key={index} className="group p-6 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-purple-500/20">
@@ -179,7 +166,6 @@ const Contact: FC = () => {
                             </div>
                         ))}
 
-                        {/* Social Links */}
                         <div className="p-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl rounded-2xl border border-white/10">
                             <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
                                 <MessageSquare className="text-purple-400" />
@@ -208,7 +194,6 @@ const Contact: FC = () => {
                         </div>
                     </div>
 
-                    {/* Right Side - Contact Form */}
                     <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
                         <div className="relative p-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl rounded-2xl border border-white/10">
                             <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
@@ -270,7 +255,6 @@ const Contact: FC = () => {
                 </div>
             </div>
 
-            {/* Message Toast component rendering */}
             {toastMessage && (
                 <MessageToast message={toastMessage} onClose={() => setToastMessage(null)} />
             )}

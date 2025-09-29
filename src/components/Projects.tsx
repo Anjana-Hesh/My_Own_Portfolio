@@ -60,7 +60,7 @@ const Projects: React.FC<ProjectsProps> = ({ onViewAllProjects }) => {
             title: "Modern POS System",
             description: "A comprehensive Point of Sale system built with JSP, Jakarta EE, and Hibernate. Features real-time inventory management, customer tracking, and detailed analytics.",
             longDescription: "This advanced POS system revolutionizes retail operations with its intuitive interface and powerful backend. Built with modern technologies, it offers seamless transaction processing, comprehensive reporting, and multi-user support.",
-            image: "", // Using Code icon instead
+            image: "",
             technologies: ["JSP", "Jakarta EE", "Hibernate", "JavaScript", "CSS"],
             github: "https://github.com/Anjana-Hesh/Point-Of-Sales-System-JSP-.git",
             live: "#",
@@ -247,7 +247,6 @@ const Projects: React.FC<ProjectsProps> = ({ onViewAllProjects }) => {
                     ))}
                 </div>
 
-                {/* View More Projects Button - Now scrolls to AllProjects section */}
                 <div className={`text-center mt-16 transition-all duration-1000 delay-1000 ${
                     isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}>

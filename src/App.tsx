@@ -15,7 +15,6 @@ const App: FC = () => {
      const [showAllProjects, setShowAllProjects] = useState(false);
     const sectionsRef = useRef<(HTMLElement | null)[]>([]);
     
-    // Components and IDs list
     const sections = [Hero, About, Projects, Service, Contact ];
     const sectionIds = ["home", "about", "projects", "services" , "contact" ];
 
@@ -25,7 +24,7 @@ const App: FC = () => {
         };
         window.addEventListener('mousemove', handleMouseMove);
 
-        const timer = setTimeout(() => setIsLoading(false), 1500); // Shorter loading time
+        const timer = setTimeout(() => setIsLoading(false), 1500);
 
         return () => {
             window.removeEventListener('mousemove', handleMouseMove);
@@ -50,7 +49,7 @@ const App: FC = () => {
             (entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        // Ensure only valid section IDs are set
+                      
                         if (sectionIds.includes(entry.target.id)) {
                              setActiveSection(entry.target.id);
                         }
@@ -82,7 +81,6 @@ const App: FC = () => {
             setShowAllProjects(true);
         };
 
-    // Function to go back to main portfolio
     const handleBackToProjects = () => {
         setShowAllProjects(false);
         setActiveSection('projects');
