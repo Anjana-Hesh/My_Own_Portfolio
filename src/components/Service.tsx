@@ -66,7 +66,7 @@ const Services: FC = () => {
                 "Performance Optimization"
             ],
             technologies: ["React", "Node.js", "TypeScript", "MongoDB", "AWS"],
-            price: "Starting at $2,500",
+            price: "Starting at LKR 2,500",
             deliveryTime: "4-8 weeks",
             color: "from-blue-500 to-cyan-500",
             bgColor: "from-blue-500/10 to-cyan-500/10"
@@ -84,7 +84,7 @@ const Services: FC = () => {
                 "Technical Documentation"
             ],
             technologies: ["Java", "Spring Boot", "JavaFX", "MySQL", "Hibernate"],
-            price: "Starting at $3,000",
+            price: "Starting at LKR3,000",
             deliveryTime: "6-10 weeks",
             color: "from-purple-500 to-pink-500",
             bgColor: "from-purple-500/10 to-pink-500/10"
@@ -102,7 +102,7 @@ const Services: FC = () => {
                 "Performance Monitoring"
             ],
             technologies: ["MySQL", "PostgreSQL", "MongoDB", "Redis", "Elasticsearch"],
-            price: "Starting at $1,200",
+            price: "Starting at LKR1,200",
             deliveryTime: "2-4 weeks",
             color: "from-green-500 to-teal-500",
             bgColor: "from-green-500/10 to-teal-500/10"
@@ -120,7 +120,7 @@ const Services: FC = () => {
                 "Rate Limiting & Security"
             ],
             technologies: ["Spring Boot", "Express.js", "Docker", "Kubernetes", "Postman"],
-            price: "Starting at $1,800",
+            price: "Starting at LKR1,800",
             deliveryTime: "3-6 weeks",
             color: "from-orange-500 to-red-500",
             bgColor: "from-orange-500/10 to-red-500/10"
@@ -138,7 +138,7 @@ const Services: FC = () => {
                 "Security Best Practices"
             ],
             technologies: ["AWS", "Docker", "Kubernetes", "GitHub Actions", "Terraform"],
-            price: "Starting at $2,000",
+            price: "Starting at LKR2,000",
             deliveryTime: "3-5 weeks",
             color: "from-indigo-500 to-purple-500",
             bgColor: "from-indigo-500/10 to-purple-500/10"
@@ -156,7 +156,7 @@ const Services: FC = () => {
                 "Accessibility Implementation"
             ],
             technologies: ["Figma", "React", "Tailwind CSS", "Framer Motion", "SCSS"],
-            price: "Starting at $1,500",
+            price: "Starting at LKR1,500",
             deliveryTime: "2-5 weeks",
             color: "from-pink-500 to-rose-500",
             bgColor: "from-pink-500/10 to-rose-500/10"

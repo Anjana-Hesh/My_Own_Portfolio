@@ -1,13 +1,16 @@
 import { useState, useEffect } from "react";
 import { Github, ExternalLink, Code, Database, Server, Eye, Star } from "lucide-react";
+import image_1 from "../assets/image_1.png";
+import image from "../assets/mental_health_care.png";
+import license from "../assets/license.png";
 
-interface ProjectStats {
+export interface ProjectStats {
     stars: number;
     forks: number;
     commits: number;
 }
 
-interface Project {
+export interface Project {
     title: string;
     description: string;
     longDescription: string;
@@ -20,9 +23,49 @@ interface Project {
     stats: ProjectStats;
 }
 
-interface ProjectsProps {
+export interface ProjectsProps {
     onViewAllProjects?: () => void;
 }
+
+// Move projects array outside component
+export const projects: Project[] = [
+    {
+        title: "Modern POS System",
+        description: "A comprehensive Point of Sale system built with JSP, Jakarta EE, and Hibernate. Features real-time inventory management, customer tracking, and detailed analytics.",
+        longDescription: "This advanced POS system revolutionizes retail operations with its intuitive interface and powerful backend. Built with modern technologies, it offers seamless transaction processing, comprehensive reporting, and multi-user support.",
+        image: image_1,
+        technologies: ["JSP", "Jakarta EE", "Hibernate", "JavaScript", "CSS"],
+        github: "https://github.com/Anjana-Hesh/Point-Of-Sales-System-JSP-.git",
+        live: "#",
+        category: "Full Stack",
+        color: "from-blue-500 to-cyan-500",
+        stats: { stars: 42, forks: 18, commits: 156 }
+    },
+    {
+        title: "Mental Health Care",
+        description: "A comprehensive healthcare management system using JavaFX and Hibernate. Streamlines patient management, appointment scheduling, and therapy session tracking.",
+        longDescription: "An all-in-one healthcare solution that digitizes therapy practice management. Features patient records, treatment plans, appointment scheduling, and detailed progress tracking with beautiful visualizations.",
+        image: image ,
+        technologies: ["JavaFX", "Hibernate", "MySQL", "Java", "JasperReports", "HTML", "CSS", "JavaScript"],
+        github: "https://github.com/Anjana-Hesh/ORM-Course-Work-Final.git",
+        live: "#",
+        category: "Desktop App",
+        color: "from-purple-500 to-pink-500",
+        stats: { stars: 28, forks: 12, commits: 89 }
+    },
+    {
+        title: "Smart Reg Web Application",
+        description: "A modern, responsive LICENSE MANAGEMENT SYSTEM showcasing advanced animations, dark mode, and interactive elements. Built with Java Spring Boot and modern CSS techniques.",
+        longDescription: "This cutting-edge License Management System demonstrates modern web development skills with stunning animations, responsive design, and optimal performance. Features dynamic content, smooth transitions, and engaging user interactions.",
+        image: license ,
+        technologies: ["HTML", "JavaScript", "CSS (Bootstrap)", "Java With Spring Boot", "Hibernate", "Spring Security"],
+        github: "https://github.com/Anjana-Hesh/SmartReg.git",
+        live: "https://youtu.be/nmYbd46a9ho?si=65lsLzk2dE7ngbwU",
+        category: "Full Stack",
+        color: "from-green-500 to-teal-500",
+        stats: { stars: 35, forks: 24, commits: 78 }
+    }
+];
 
 const Projects: React.FC<ProjectsProps> = ({ onViewAllProjects }) => {
     const [isVisible, setIsVisible] = useState(false);
@@ -44,55 +87,6 @@ const Projects: React.FC<ProjectsProps> = ({ onViewAllProjects }) => {
 
         return () => observer.disconnect();
     }, []);
-
-    const handleViewAllProjects = () => {
-        const allProjectsSection = document.getElementById('allprojects');
-        if (allProjectsSection) {
-            allProjectsSection.scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start' 
-            });
-        }
-    };
-
-    const projects: Project[] = [
-        {
-            title: "Modern POS System",
-            description: "A comprehensive Point of Sale system built with JSP, Jakarta EE, and Hibernate. Features real-time inventory management, customer tracking, and detailed analytics.",
-            longDescription: "This advanced POS system revolutionizes retail operations with its intuitive interface and powerful backend. Built with modern technologies, it offers seamless transaction processing, comprehensive reporting, and multi-user support.",
-            image: "",
-            technologies: ["JSP", "Jakarta EE", "Hibernate", "JavaScript", "CSS"],
-            github: "https://github.com/Anjana-Hesh/Point-Of-Sales-System-JSP-.git",
-            live: "#",
-            category: "Full Stack",
-            color: "from-blue-500 to-cyan-500",
-            stats: { stars: 42, forks: 18, commits: 156 }
-        },
-        {
-            title: "Mental Health Care",
-            description: "A comprehensive healthcare management system using JavaFX and Hibernate. Streamlines patient management, appointment scheduling, and therapy session tracking.",
-            longDescription: "An all-in-one healthcare solution that digitizes therapy practice management. Features patient records, treatment plans, appointment scheduling, and detailed progress tracking with beautiful visualizations.",
-            image: "",
-            technologies: ["JavaFX", "Hibernate", "MySQL", "Java", "JasperReports", "HTML", "CSS", "JavaScript"],
-            github: "https://github.com/Anjana-Hesh/ORM-Course-Work-Final.git",
-            live: "#",
-            category: "Desktop App",
-            color: "from-purple-500 to-pink-500",
-            stats: { stars: 28, forks: 12, commits: 89 }
-        },
-        {
-            title: "Smart Reg Web Application",
-            description: "A modern, responsive LICENSE MANAGEMENT SYSTEM showcasing advanced animations, dark mode, and interactive elements. Built with Java Spring Boot and modern CSS techniques.",
-            longDescription: "This cutting-edge License Management System demonstrates modern web development skills with stunning animations, responsive design, and optimal performance. Features dynamic content, smooth transitions, and engaging user interactions.",
-            image: "",
-            technologies: ["HTML", "JavaScript", "CSS (Bootstrap)", "Java With Spring Boot", "Hibernate", "Spring Security"],
-            github: "https://github.com/Anjana-Hesh/SmartReg.git",
-            live: "https://youtu.be/nmYbd46a9ho?si=65lsLzk2dE7ngbwU",
-            category: "Full Stack",
-            color: "from-green-500 to-teal-500",
-            stats: { stars: 35, forks: 24, commits: 78 }
-        }
-    ];
 
     return (
         <section
@@ -132,10 +126,18 @@ const Projects: React.FC<ProjectsProps> = ({ onViewAllProjects }) => {
                                 
                                 <div className={`relative ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                                     <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/10 group-hover:border-purple-500/50 transition-all duration-500">
-                                        <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
-                                            <div className={`w-32 h-32 rounded-full bg-gradient-to-r ${project.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-500`}>
-                                                <Code size={48} className="text-white" />
-                                            </div>
+                                        <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center overflow-hidden">
+                                            {project.image ? (
+                                                <img 
+                                                    src={project.image} 
+                                                    alt={project.title}
+                                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                                />
+                                            ) : (
+                                                <div className={`w-32 h-32 rounded-full bg-gradient-to-r ${project.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-500`}>
+                                                    <Code size={48} className="text-white" />
+                                                </div>
+                                            )}
                                         </div>
          
                                         <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">

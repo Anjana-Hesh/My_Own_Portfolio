@@ -1,5 +1,14 @@
 import { useState, useEffect } from "react";
-import { Github, ExternalLink, Code, Database, Server, Eye, Star, Search, Filter, Calendar, ArrowLeft } from "lucide-react";
+import { Github, ExternalLink , Database, Server, Eye, Star, Search, Filter, Calendar, ArrowLeft } from "lucide-react";
+import image_1 from "../assets/image_1.png";
+import image from "../assets/mental_health_care.png";
+import license from "../assets/license.png";
+import e_commerce from "../assets/e-commerce.png";
+import portfolio from "../assets/image.png"
+import cms from "../assets/cms.png"
+import chat from "../assets/chat.png"
+import hightway from "../assets/hight_way_bus.png"
+import construsction from "../assets/construsction.png"
 
 interface ProjectStats {
     stars: number;
@@ -12,6 +21,7 @@ interface Project {
     id: number;
     title: string;
     description: string;
+    image: string;
     technologies: string[];
     github: string;
     live: string;
@@ -59,6 +69,7 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
             id: 1,
             title: "Modern POS System",
             description: "A comprehensive Point of Sale system built with JSP, Jakarta EE, and Hibernate. Features real-time inventory management, customer tracking, and detailed analytics.",
+            image: image_1,
             technologies: ["JSP", "Jakarta EE", "Hibernate", "JavaScript", "CSS"],
             github: "https://github.com/Anjana-Hesh/Point-Of-Sales-System-JSP-.git",
             live: "#",
@@ -72,6 +83,7 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
             id: 2,
             title: "Mental Health Care System",
             description: "A comprehensive healthcare management system using JavaFX and Hibernate. Streamlines patient management, appointment scheduling, and therapy session tracking.",
+            image: image,
             technologies: ["JavaFX", "Hibernate", "MySQL", "Java", "JasperReports"],
             github: "https://github.com/Anjana-Hesh/ORM-Course-Work-Final.git",
             live: "#",
@@ -85,6 +97,7 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
             id: 3,
             title: "Smart Reg Web Application",
             description: "A modern, responsive license management system showcasing advanced animations, dark mode, and interactive elements. Built with Spring Boot.",
+            image: license,
             technologies: ["HTML", "JavaScript", "Bootstrap", "Spring Boot", "Hibernate", "Spring Security"],
             github: "https://github.com/Anjana-Hesh/SmartReg.git",
             live: "https://youtu.be/nmYbd46a9ho?si=65lsLzk2dE7ngbwU",
@@ -98,6 +111,7 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
             id: 4,
             title: "E-Commerce Platform",
             description: "Full-featured online shopping platform with user authentication, product catalog, shopping cart, and payment integration.",
+            image: e_commerce,
             technologies: ["HTML", "CSS", "JS"],
             github: "https://github.com/Anjana-Hesh/E-Commerce-Site.git",
             live: "#",
@@ -111,6 +125,7 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
             id: 5,
             title: "High-Way Bus seat booking (Quick Seat)",
             description: "Collaborative booking , team collaboration features, and project tracking. and high-way bus seat booking platform with many features like , visibility of seats , payment plans (Monthly , Weekly , daily) , discounts , e-mail updates , real time traking but location .....",
+            image: hightway,
             technologies: ["React-Native"],
             github: "https://github.com/Anjana-Hesh/Quick_Seats_Front-End.git",
             live: "#",
@@ -124,6 +139,7 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
             id: 6,
             title: "Constructor Management System (Layered)",
             description: "A building construction management system , Add a project with ingreadiant like soil , sement , swips , ... and the components like shovel , Hoe , Pans ... and more features",
+            image: construsction,
             technologies: ["Java fx", "java", "Layered Architecture", "Hibernate"],
             github: "https://github.com/Anjana-Hesh/Apex-Building-solution.git",
             live: "#",
@@ -137,6 +153,7 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
             id: 7,
             title: "Constructor Management System (MVC)",
             description: "A building construction management system , Add a project with ingreadiant like soil , sement , swips , ... and the components like shovel , Hoe , Pans ... and more features",
+            image: construsction,
             technologies: ["Java fx", "java", "MVC Architecture", "My-SQL"],
             github: "https://github.com/Anjana-Hesh/Apex-Solution.git",
             live: "#",
@@ -150,6 +167,7 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
             id: 8,
             title: "Complaint Management System (CMS)",
             description: "Modern CMS platform with markdown support with re-mark, complaint add , edit , delete with simple crud, and staff managing to the addmin and the employees can send a complaint and addmin can resolve it with a re-mark.",
+            image: cms,
             technologies: ["JSP", "Jakarta EE", "Hibernate", "JavaScript", "CSS"],
             github: "https://github.com/Anjana-Hesh/CMS-----Java-EE-Assignment.git",
             live: "#",
@@ -163,6 +181,7 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
             id: 9,
             title: "Chat Application",
             description: "Real-time chat application with multiple rooms, file sharing, and emoji support using WebSocket technology.",
+            image: chat,
             technologies: ["Socket.io", "Java", "Java FX"],
             github: "https://github.com/Anjana-Hesh/Complete-Chat-Application.git",
             live: "#",
@@ -176,6 +195,7 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
             id: 10,
             title: "Portfolio Website",
             description: "Personal portfolio website with interactive animations, project showcase, and contact form with Singal page Application.",
+            image: portfolio,
             technologies: ["React", "Framer Motion", "Tailwind CSS", "EmailJS"],
             github: "https://github.com/Anjana-Hesh/My_Own_Portfolio.git",
             live: "#",
@@ -319,84 +339,96 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
                             }`}
                             style={{ transitionDelay: `${Math.min(index * 100, 1000)}ms` }}
                         >
-                            <div className="relative h-full bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-500/20">
+                            <div className="relative h-full bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-purple-500/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-500/20">
                            
                                 {project.featured && (
-                                    <div className="absolute -top-2 -right-2 px-3 py-1 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-semibold rounded-full">
+                                    <div className="absolute top-4 right-4 z-10 px-3 py-1 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-semibold rounded-full">
                                         FEATURED
                                     </div>
                                 )}
             
-                                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${project.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500`}>
-                                    <Code size={24} className="text-white" />
-                                </div>
-
-                                <div className="flex items-center justify-between mb-3">
-                                    <span className={`px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${project.color} text-white`}>
-                                        {project.category}
-                                    </span>
-                                    <div className="flex items-center gap-1 text-xs text-gray-400">
+                                {/* Project Image */}
+                                <div className="relative h-48 overflow-hidden bg-gradient-to-br from-gray-800 to-gray-900">
+                                    <img 
+                                        src={project.image} 
+                                        alt={project.title}
+                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                    
+                                    {/* Category Badge on Image */}
+                                    <div className="absolute bottom-3 left-3">
+                                        <span className={`px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${project.color} text-white backdrop-blur-sm`}>
+                                            {project.category}
+                                        </span>
+                                    </div>
+                                    
+                                    {/* Stars Badge on Image */}
+                                    <div className="absolute bottom-3 right-3 flex items-center gap-1 px-2 py-1 bg-black/50 backdrop-blur-sm rounded-full text-xs text-white">
                                         <Star size={12} />
                                         {project.stats.stars}
                                     </div>
                                 </div>
 
-                                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
-                                    {project.title}
-                                </h3>
-                                <p className="text-gray-400 text-sm mb-4 line-clamp-3">
-                                    {project.description}
-                                </p>
+                                {/* Project Content */}
+                                <div className="p-6">
+                                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
+                                        {project.title}
+                                    </h3>
+                                    <p className="text-gray-400 text-sm mb-4 line-clamp-3">
+                                        {project.description}
+                                    </p>
 
-                                <div className="flex flex-wrap gap-2 mb-4">
-                                    {project.technologies.slice(0, 3).map((tech, techIndex) => (
-                                        <span
-                                            key={techIndex}
-                                            className="px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-gray-300"
-                                        >
-                                            {tech}
-                                        </span>
-                                    ))}
-                                    {project.technologies.length > 3 && (
-                                        <span className="px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-gray-400">
-                                            +{project.technologies.length - 3}
-                                        </span>
-                                    )}
-                                </div>
-
-                                <div className="flex items-center justify-between text-xs text-gray-400 mb-4">
-                                    <div className="flex items-center gap-3">
-                                        <div className="flex items-center gap-1">
-                                            <Database size={12} />
-                                            <span>{project.stats.forks}</span>
-                                        </div>
-                                        <div className="flex items-center gap-1">
-                                            <Server size={12} />
-                                            <span>{project.stats.commits}</span>
-                                        </div>
+                                    <div className="flex flex-wrap gap-2 mb-4">
+                                        {project.technologies.slice(0, 3).map((tech, techIndex) => (
+                                            <span
+                                                key={techIndex}
+                                                className="px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-gray-300"
+                                            >
+                                                {tech}
+                                            </span>
+                                        ))}
+                                        {project.technologies.length > 3 && (
+                                            <span className="px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-gray-400">
+                                                +{project.technologies.length - 3}
+                                            </span>
+                                        )}
                                     </div>
-                                    <span className="text-xs">{project.year}</span>
-                                </div>
 
-                                <div className="flex gap-3 mt-auto">
-                                    <a
-                                        href={project.github}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-lg text-sm text-gray-300 hover:text-white transition-all duration-300"
-                                    >
-                                        <Github size={16} />
-                                        Code
-                                    </a>
-                                    <a
-                                        href={project.live}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className={`flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r ${project.color} text-white rounded-lg text-sm font-medium hover:scale-105 transition-all duration-300`}
-                                    >
-                                        <Eye size={16} />
-                                        Demo
-                                    </a>
+                                    <div className="flex items-center justify-between text-xs text-gray-400 mb-4">
+                                        <div className="flex items-center gap-3">
+                                            <div className="flex items-center gap-1">
+                                                <Database size={12} />
+                                                <span>{project.stats.forks}</span>
+                                            </div>
+                                            <div className="flex items-center gap-1">
+                                                <Server size={12} />
+                                                <span>{project.stats.commits}</span>
+                                            </div>
+                                        </div>
+                                        <span className="text-xs">{project.year}</span>
+                                    </div>
+
+                                    <div className="flex gap-3 mt-auto">
+                                        <a
+                                            href={project.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-lg text-sm text-gray-300 hover:text-white transition-all duration-300"
+                                        >
+                                            <Github size={16} />
+                                            Code
+                                        </a>
+                                        <a
+                                            href={project.live}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className={`flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r ${project.color} text-white rounded-lg text-sm font-medium hover:scale-105 transition-all duration-300`}
+                                        >
+                                            <Eye size={16} />
+                                            Demo
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -428,7 +460,7 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
                                 Follow on GitHub
                             </a>
                             <a
-                                href="mailto:your.email@example.com"
+                                href="mailto:anjanaheshan676@gmail.com"
                                 className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-xl font-medium transition-all duration-300 hover:scale-105"
                             >
                                 Get in Touch

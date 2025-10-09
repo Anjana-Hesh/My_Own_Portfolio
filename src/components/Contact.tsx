@@ -117,8 +117,8 @@ const Contact: FC = () => {
     const socialLinks: SocialLink[] = [
         { Icon: Linkedin, href: "https://www.linkedin.com/in/anjana-heshan-79334b260/", color: "from-blue-600 to-blue-700", hoverColor: "hover:shadow-blue-500/50", name: "LinkedIn" },
         { Icon: Github, href: "https://github.com/Anjana-Hesh", color: "from-gray-700 to-gray-800", hoverColor: "hover:shadow-gray-500/50", name: "GitHub" },
-        { Icon: Facebook, href: "https://facebook.com", color: "from-blue-500 to-blue-600", hoverColor: "hover:shadow-blue-400/50", name: "Facebook" },
-        { Icon: Instagram, href: "https://instagram.com", color: "from-pink-500 to-rose-600", hoverColor: "hover:shadow-pink-500/50", name: "Instagram" },
+        { Icon: Facebook, href: "https://web.facebook.com/anjana.heshan.353/?_rdc=1&_rdr#", color: "from-blue-500 to-blue-600", hoverColor: "hover:shadow-blue-400/50", name: "Facebook" },
+        { Icon: Instagram, href: "https://www.instagram.com/_anjana_heshan_/", color: "from-pink-500 to-rose-600", hoverColor: "hover:shadow-pink-500/50", name: "Instagram" },
         { Icon: Youtube, href: "https://www.youtube.com/@anjanaheshan3994", color: "from-red-500 to-red-600", hoverColor: "hover:shadow-red-500/50", name: "YouTube" }
     ];
 
