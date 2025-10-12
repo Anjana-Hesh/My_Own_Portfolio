@@ -36,13 +36,13 @@ export default function Footer() {
     },
     { 
       Icon: Facebook, 
-      href: "https://facebook.com", 
+      href: "https://web.facebook.com/anjana.heshan.353/?_rdc=1&_rdr#", 
       color: "hover:bg-blue-500",
       name: "Facebook"
     },
     { 
       Icon: Instagram, 
-      href: "https://instagram.com", 
+      href: "https://www.instagram.com/_anjana_heshan_/", 
       color: "hover:bg-pink-500",
       name: "Instagram"
     },
@@ -133,7 +133,7 @@ export default function Footer() {
             <div>
               <h4 className="text-lg font-semibold mb-6">Technologies</h4>
               <div className="flex flex-wrap gap-2">
-                {['React', 'TypeScript', 'Java', 'Spring Boot', 'MySQL'].map((tech, index) => (
+                {['React', 'TypeScript', 'Java', 'Spring Boot', 'MySQL' , 'Hibernate' , 'Java Script' , 'Spring'].map((tech, index) => (
                   <span
                     key={index}
                     className="px-3 py-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-sm text-gray-400 hover:border-purple-500/50 hover:text-white transition-all duration-300"

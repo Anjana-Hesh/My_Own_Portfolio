@@ -59,7 +59,6 @@ const App: FC = () => {
             { rootMargin: '-50% 0px -50% 0px' }
         );
 
-
         const currentSections = sectionsRef.current.filter((el): el is HTMLElement => el !== null);
         
         currentSections.forEach((section) => {
@@ -104,13 +103,13 @@ const App: FC = () => {
     return (
         <div className="bg-black text-white min-h-screen font-inter">
         
-            {/* <div 
+            <div 
                 className="fixed w-6 h-6 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full pointer-events-none z-50 mix-blend-difference transition-transform duration-100 ease-out hidden md:block"
                 style={{
                     left: `${mousePosition.x - 12}px`,
                     top: `${mousePosition.y - 12}px`,
                 }}
-            /> */}
+            />
 
             <div className="fixed inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob"></div>
