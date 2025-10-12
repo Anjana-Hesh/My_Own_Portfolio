@@ -2,13 +2,13 @@
 
 My personal portfolio website. Here, I showcase my **skills**, **projects**, and **contact details**.
 
-![Portfolio Screenshot](../my_portfolio/src/assets/image.png)
+![Portfolio Screenshot](/src/assets/image.png)
 
 ---
 
-## 🌐 Live Website
+<!-- ## 🌐 Live Website
 
-**[🔗 https://Anjana.dev](https://yourname.dev)**
+**[🔗 https://Anjana.dev](https://yourname.dev)** -->
 
 ---
 
