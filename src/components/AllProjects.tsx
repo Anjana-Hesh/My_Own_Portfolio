@@ -9,6 +9,10 @@ import cms from "../assets/cms.png"
 import chat from "../assets/chat.png"
 import hightway from "../assets/hight_way_bus.png"
 import construsction from "../assets/construsction.png"
+import hotel_it from "../assets/hotel_it.png"
+import recipe_it from "../assets/recipe_it.png"
+import car_game_it from "../assets/car_game_it.png"
+import tik_tak_toe_game from "../assets/tik_tak_toe_game.png"
 
 interface ProjectStats {
     stars: number;
@@ -75,9 +79,9 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
             live: "#",
             category: "Full Stack",
             color: "from-blue-500 to-cyan-500",
-            stats: { stars: 42, forks: 18, commits: 156, lastUpdated: "2024-01-15" },
+            stats: { stars: 42, forks: 18, commits: 156, lastUpdated: "2025-06-15" },
             featured: true,
-            year: 2024
+            year: 2025
         },
         {
             id: 2,
@@ -89,9 +93,9 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
             live: "#",
             category: "Desktop App",
             color: "from-purple-500 to-pink-500",
-            stats: { stars: 28, forks: 12, commits: 89, lastUpdated: "2023-12-20" },
+            stats: { stars: 28, forks: 12, commits: 89, lastUpdated: "2025-05-20" },
             featured: true,
-            year: 2023
+            year: 2025
         },
         {
             id: 3,
@@ -103,9 +107,9 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
             live: "https://youtu.be/nmYbd46a9ho?si=65lsLzk2dE7ngbwU",
             category: "Full Stack",
             color: "from-green-500 to-teal-500",
-            stats: { stars: 35, forks: 24, commits: 78, lastUpdated: "2024-02-10" },
+            stats: { stars: 35, forks: 24, commits: 78, lastUpdated: "2025-09-21" },
             featured: true,
-            year: 2024
+            year: 2025
         },
         {
             id: 4,
@@ -117,9 +121,9 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
             live: "#",
             category: "FrontEnd",
             color: "from-orange-500 to-red-500",
-            stats: { stars: 67, forks: 34, commits: 234, lastUpdated: "2024-03-05" },
+            stats: { stars: 67, forks: 34, commits: 234, lastUpdated: "2025-03-05" },
             featured: false,
-            year: 2024
+            year: 2025
         },
         {
             id: 5,
@@ -131,9 +135,9 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
             live: "#",
             category: "Mobile App Front End",
             color: "from-indigo-500 to-purple-500",
-            stats: { stars: 23, forks: 11, commits: 123, lastUpdated: "2023-11-18" },
+            stats: { stars: 23, forks: 11, commits: 123, lastUpdated: "2025-08-18" },
             featured: false,
-            year: 2023
+            year: 2025
         },
         {
             id: 6,
@@ -145,9 +149,9 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
             live: "#",
             category: "Desktop Application",
             color: "from-blue-400 to-blue-600",
-            stats: { stars: 19, forks: 8, commits: 67, lastUpdated: "2023-10-22" },
+            stats: { stars: 19, forks: 8, commits: 67, lastUpdated: "2024-10-22" },
             featured: false,
-            year: 2023
+            year: 2024
         },
         {
             id: 7,
@@ -159,9 +163,9 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
             live: "#",
             category: "Desktop App",
             color: "from-gray-500 to-gray-700",
-            stats: { stars: 31, forks: 15, commits: 145, lastUpdated: "2023-09-30" },
+            stats: { stars: 31, forks: 15, commits: 145, lastUpdated: "2024-07-30" },
             featured: false,
-            year: 2023
+            year: 2024
         },
         {
             id: 8,
@@ -173,9 +177,9 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
             live: "#",
             category: "Full Stack",
             color: "from-teal-500 to-green-500",
-            stats: { stars: 45, forks: 22, commits: 189, lastUpdated: "2024-01-08" },
+            stats: { stars: 45, forks: 22, commits: 189, lastUpdated: "2025-07-08" },
             featured: false,
-            year: 2024
+            year: 2025
         },
         {
             id: 9,
@@ -187,9 +191,9 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
             live: "#",
             category: "Web App",
             color: "from-pink-500 to-rose-500",
-            stats: { stars: 38, forks: 19, commits: 112, lastUpdated: "2023-12-15" },
+            stats: { stars: 38, forks: 19, commits: 112, lastUpdated: "2025-03-15" },
             featured: false,
-            year: 2023
+            year: 2025
         },
         {
             id: 10,
@@ -201,15 +205,71 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
             live: "#",
             category: "Web Site",
             color: "from-violet-500 to-purple-500",
-            stats: { stars: 26, forks: 13, commits: 89, lastUpdated: "2024-02-20" },
+            stats: { stars: 26, forks: 13, commits: 89, lastUpdated: "2025-10-20" },
             featured: false,
-            year: 2024
+            year: 2025
+        },
+        {
+            id: 11,
+            title: "Hotel Website",
+            description: "A hotel web site created to enhance my html , bootstrap css framwork knowledge .",
+            image: hotel_it,
+            technologies: ["HTML", "Bootstrap css", "Java Script"],
+            github: "https://github.com/Anjana-Hesh/Assignment--10-Part-02-.git",
+            live: "https://www.linkedin.com/feed/update/urn:li:activity:7324745946460807168/",
+            category: "Web Site",
+            color: "from-violet-500 to-purple-500",
+            stats: { stars: 36, forks: 13, commits: 89, lastUpdated: "2025-02-12" },
+            featured: false,
+            year: 2025
+        },
+        {
+            id: 12,
+            title: "Recipe Website",
+            description: "A Recipe web site created to enhance my html , plain css knowledge .",
+            image: recipe_it,
+            technologies: ["HTML", "plain css", "Java Script"],
+            github: "https://github.com/Anjana-Hesh/Assignment--10-Part-01-.git",
+            live: "#",
+            category: "Web Site",
+            color: "from-red-500 to-purple-500",
+            stats: { stars: 36, forks: 13, commits: 89, lastUpdated: "2025-01-12" },
+            featured: false,
+            year: 2025
+        },
+        {
+            id: 13,
+            title: "Simple Car Game",
+            description: "A Simple Car Game created to Using html css and Java Script .",
+            image: car_game_it,
+            technologies: ["HTML", "css", "Java Script"],
+            github: "https://github.com/Anjana-Hesh/Assignment--09.git",
+            live: "#",
+            category: "Game",
+            color: "from-blue-500 to-purple-500",
+            stats: { stars: 36, forks: 13, commits: 89, lastUpdated: "2025-04-12" },
+            featured: false,
+            year: 2025
+        },
+        {
+            id: 13,
+            title: "Simple Tik_Tak_Toe Game",
+            description: "A Simple Tik Tak Toe Game created to Using Java css and JavaFX with OOP Consepts in java as final oop project .",
+            image: tik_tak_toe_game,
+            technologies: ["Style sheet", "Java FX", "Java"],
+            github: "https://github.com/Anjana-Hesh/tic-tac-toe.git",
+            live: "#",
+            category: "Game",
+            color: "from-blue-500 to-purple-500",
+            stats: { stars: 36, forks: 13, commits: 89, lastUpdated: "2025-04-12" },
+            featured: false,
+            year: 2025
         }
         
     ];
 
     const categories = ["All", "Full Stack", "Web App", "Desktop App", "Mobile App"];
-    const years = ["All", "2024", "2023", "2022"];
+    const years = ["All", "2025" ,"2024"];
 
     const filteredProjects = allProjects.filter(project => {
         const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
