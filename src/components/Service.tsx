@@ -14,8 +14,8 @@ interface Service {
     fullDesc: string;
     features: string[];
     technologies: string[];
-    price: string;
-    deliveryTime: string;
+    // price: string;
+    // deliveryTime: string;
     color: string;
     bgColor: string;
 }
@@ -66,8 +66,8 @@ const Services: FC = () => {
                 "Performance Optimization"
             ],
             technologies: ["React", "Node.js", "TypeScript", "MongoDB", "AWS"],
-            price: "Starting at LKR 2,500",
-            deliveryTime: "4-8 weeks",
+            // price: "Starting at LKR 2,500",
+            // deliveryTime: "4-8 weeks",
             color: "from-blue-500 to-cyan-500",
             bgColor: "from-blue-500/10 to-cyan-500/10"
         },
@@ -84,8 +84,8 @@ const Services: FC = () => {
                 "Technical Documentation"
             ],
             technologies: ["Java", "Spring Boot", "JavaFX", "MySQL", "Hibernate"],
-            price: "Starting at LKR3,000",
-            deliveryTime: "6-10 weeks",
+            // price: "Starting at LKR3,000",
+            // deliveryTime: "6-10 weeks",
             color: "from-purple-500 to-pink-500",
             bgColor: "from-purple-500/10 to-pink-500/10"
         },
@@ -102,8 +102,8 @@ const Services: FC = () => {
                 "Performance Monitoring"
             ],
             technologies: ["MySQL", "PostgreSQL", "MongoDB", "Redis", "Elasticsearch"],
-            price: "Starting at LKR1,200",
-            deliveryTime: "2-4 weeks",
+            // price: "Starting at LKR1,200",
+            // deliveryTime: "2-4 weeks",
             color: "from-green-500 to-teal-500",
             bgColor: "from-green-500/10 to-teal-500/10"
         },
@@ -120,8 +120,8 @@ const Services: FC = () => {
                 "Rate Limiting & Security"
             ],
             technologies: ["Spring Boot", "Express.js", "Docker", "Kubernetes", "Postman"],
-            price: "Starting at LKR1,800",
-            deliveryTime: "3-6 weeks",
+            // price: "Starting at LKR1,800",
+            // deliveryTime: "3-6 weeks",
             color: "from-orange-500 to-red-500",
             bgColor: "from-orange-500/10 to-red-500/10"
         },
@@ -138,8 +138,8 @@ const Services: FC = () => {
                 "Security Best Practices"
             ],
             technologies: ["AWS", "Docker", "Kubernetes", "GitHub Actions", "Terraform"],
-            price: "Starting at LKR2,000",
-            deliveryTime: "3-5 weeks",
+            // price: "Starting at LKR2,000",
+            // deliveryTime: "3-5 weeks",
             color: "from-indigo-500 to-purple-500",
             bgColor: "from-indigo-500/10 to-purple-500/10"
         },
@@ -156,8 +156,8 @@ const Services: FC = () => {
                 "Accessibility Implementation"
             ],
             technologies: ["Figma", "React", "Tailwind CSS", "Framer Motion", "SCSS"],
-            price: "Starting at LKR1,500",
-            deliveryTime: "2-5 weeks",
+            // price: "Starting at LKR1,500",
+            // deliveryTime: "2-5 weeks",
             color: "from-pink-500 to-rose-500",
             bgColor: "from-pink-500/10 to-rose-500/10"
         }
@@ -288,7 +288,7 @@ const Services: FC = () => {
                                     </div>
                                 </div>
 
-                                <div className="flex justify-between items-center mb-6 p-4 bg-white/5 rounded-xl">
+                                {/* <div className="flex justify-between items-center mb-6 p-4 bg-white/5 rounded-xl">
                                     <div>
                                         <div className="text-lg font-bold text-white">{service.price}</div>
                                         <div className="text-xs text-gray-400">Starting price</div>
@@ -300,15 +300,15 @@ const Services: FC = () => {
                                         </div>
                                         <div className="text-xs text-gray-400">Estimated timeline</div>
                                     </div>
-                                </div>
+                                </div> */}
 
-                                <a 
+                                {/* <a 
                                     href="#contact"
                                     className={`w-full py-3 px-6 bg-gradient-to-r ${service.color} hover:from-purple-600 hover:to-pink-600 text-white font-medium rounded-xl transition-all duration-300 hover:scale-[1.01] flex items-center justify-center gap-2 group/btn`}
                                 >
                                     Get Started
                                     <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform duration-300" />
-                                </a>
+                                </a> */}
 
                                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                             </div>
