@@ -1,9 +1,13 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Home, User, Briefcase, Mail } from "lucide-react";
 
-export default function Navbar() {
+export type NavbarProps = {
+  activeSection: string;
+};
+
+export default function Navbar({ activeSection }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const [active, setActive] = useState("home");
+  const [active, setActive] = useState(activeSection);
   const [scrolled, setScrolled] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
