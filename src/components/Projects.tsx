@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Github, ExternalLink, Code, Database, Server, Eye, Star } from "lucide-react";
-import image_1 from "../assets/image_1.png";
 import image from "../assets/mental_health_care.png";
 import license from "../assets/license.png";
+import carehub from "../assets/carehub.png";
 
 export interface ProjectStats {
     stars: number;
@@ -30,13 +30,13 @@ export interface ProjectsProps {
 // Move projects array outside component
 export const projects: Project[] = [
     {
-        title: "Modern POS System",
-        description: "A comprehensive Point of Sale system built with JSP, Jakarta EE, and Hibernate. Features real-time inventory management, customer tracking, and detailed analytics.",
-        longDescription: "This advanced POS system revolutionizes retail operations with its intuitive interface and powerful backend. Built with modern technologies, it offers seamless transaction processing, comprehensive reporting, and multi-user support.",
-        image: image_1,
-        technologies: ["JSP", "Jakarta EE", "Hibernate", "JavaScript", "CSS"],
-        github: "https://github.com/Anjana-Hesh/Point-Of-Sales-System-JSP-.git",
-        live: "#",
+        title: "Care Hub Med",
+        description: "Patient management and appointment scheduling system built with React, Node.js, Express js and MongoDB for efficient healthcare services. and admin panel for managing doctors, patients, and appointments.and also doctor panel for managing their appointments and patient records. including thire profiles management.",
+        longDescription: "A comprehensive healthcare management system that streamlines patient management, appointment scheduling, and medical record keeping. Features include user authentication, role-based access control, and an intuitive interface for both patients and healthcare providers.",
+        image: carehub,
+        technologies: ["React", "Node.js", "Express.js", "MongoDB", "TypeScript", "Tailwind CSS" , "JWT Authentication" , "Multer" , "cloudinary" , "email" , "vercel deployment"],
+        github: "https://github.com/Anjana-Hesh/CareHub-Med.git",
+        live: "https://care-hub-med.vercel.app/",
         category: "Full Stack",
         color: "from-blue-500 to-cyan-500",
         stats: { stars: 42, forks: 18, commits: 156 }
