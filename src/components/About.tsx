@@ -1,5 +1,9 @@
 import { useState, useEffect } from "react";
-import { Code, Database, Globe, Server, Zap, type LucideIcon } from "lucide-react";
+import { Code, Database, Globe, Server, Zap, type LucideIcon , Atom,   Braces,
+  Coffee,
+  Leaf,
+  Layers,Smartphone,
+  Terminal, } from "lucide-react";
 
 interface Skill {
     name: string;
@@ -46,15 +50,19 @@ const About = () => {
     }, []);
 
     const skills: Skill[] = [
-        { name: "React", level: 90, icon: Code, color: "from-blue-400 to-blue-600" },
-        { name: "TypeScript", level: 85, icon: Code, color: "from-blue-400 to-indigo-600" },
-        { name: "Java", level: 88, icon: Code, color: "from-orange-400 to-red-600" },
-        { name: "Spring Boot", level: 82, icon: Server, color: "from-green-400 to-green-600" },
-        { name: "Hibernate", level: 80, icon: Database, color: "from-yellow-400 to-orange-600" },
+        { name: "React", level: 75, icon: Atom, color: "from-cyan-400 to-blue-600" },
+        { name: "TypeScript", level: 60, icon: Braces, color: "from-blue-500 to-indigo-600" },
+        { name: "Java", level: 88, icon: Coffee, color: "from-orange-400 to-red-600" },
+        { name: "Spring Boot", level: 85, icon: Leaf, color: "from-green-400 to-green-600" },
+        { name: "Hibernate", level: 80, icon: Layers, color: "from-yellow-400 to-orange-600" },
         { name: "MySQL", level: 85, icon: Database, color: "from-blue-400 to-blue-600" },
-        { name: "HTML & CSS", level: 92, icon: Globe, color: "from-pink-400 to-rose-600" },
-        { name: "JavaScript", level: 89, icon: Zap, color: "from-yellow-400 to-yellow-600" }
+        { name: "HTML & CSS", level: 80, icon: Globe, color: "from-pink-400 to-rose-600" },
+        { name: "JavaScript", level: 50, icon: Zap, color: "from-yellow-400 to-yellow-600" },
+        { name: "Flutter", level: 30, icon: Smartphone, color: "from-sky-400 to-blue-500" },
+        { name: "Python", level: 60, icon: Terminal, color: "from-emerald-400 to-green-600" },
+        { name: "React Native", level: 40, icon: Smartphone, color: "from-purple-400 to-indigo-600" },
     ];
+
 
     const experiences: Experience[] = [
         {
@@ -191,16 +199,16 @@ const About = () => {
                             </div>
 
                             <div className="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-white/10">
-                                <div className="text-center">
+                                {/* <div className="text-center">
                                     <div className="text-2xl font-bold text-purple-400 mb-1">2+</div>
                                     <div className="text-sm text-gray-400">Years Experience</div>
-                                </div>
+                                </div> */}
                                 <div className="text-center">
-                                    <div className="text-2xl font-bold text-pink-400 mb-1">15+</div>
+                                    <div className="text-2xl font-bold text-pink-400 mb-1">35+</div>
                                     <div className="text-sm text-gray-400">Projects Done</div>
                                 </div>
                                 <div className="text-center">
-                                    <div className="text-2xl font-bold text-cyan-400 mb-1">8+</div>
+                                    <div className="text-2xl font-bold text-cyan-400 mb-1">15+</div>
                                     <div className="text-sm text-gray-400">Technologies</div>
                                 </div>
                             </div>

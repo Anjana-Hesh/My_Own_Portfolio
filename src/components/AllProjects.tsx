@@ -13,6 +13,9 @@ import hotel_it from "../assets/hotel_it.png"
 import recipe_it from "../assets/recipe_it.png"
 import car_game_it from "../assets/car_game_it.png"
 import tik_tak_toe_game from "../assets/tik_tak_toe_game.png"
+import carhub from "../assets/carehub.png";
+import fluttercalculator from "../assets/fluttercal.png";
+import seatBookingReact from "../assets/seetbookingreact.png";
 
 interface ProjectStats {
     stars: number;
@@ -252,7 +255,7 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
             year: 2025
         },
         {
-            id: 13,
+            id: 14,
             title: "Simple Tik_Tak_Toe Game",
             description: "A Simple Tik Tak Toe Game created to Using Java css and JavaFX with OOP Consepts in java as final oop project .",
             image: tik_tak_toe_game,
@@ -263,6 +266,48 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
             color: "from-blue-500 to-purple-500",
             stats: { stars: 36, forks: 13, commits: 89, lastUpdated: "2025-04-12" },
             featured: false,
+            year: 2025
+        },
+        {
+            id: 15,
+            title: "Care Hub Med",
+            description: "Patient management and appointment scheduling system built with React, Node.js, Express js and MongoDB for efficient healthcare services. and admin panel for managing doctors, patients, and appointments.and also doctor panel for managing their appointments and patient records. including thire profiles management.",
+            image: carhub,
+            technologies: ["React", "Node.js", "Express.js", "MongoDB", "TypeScript", "Tailwind CSS" , "JWT Authentication" , "Multer" , "cloudinary" , "email" , "vercel deployment"],
+            github: "https://github.com/Anjana-Hesh/CareHub-Med-Backend.git",
+            live: "https://care-hub-med.vercel.app/",
+            category: "Full Stack",
+            color: "from-blue-500 to-purple-500",
+            stats: { stars: 36, forks: 13, commits: 89, lastUpdated: "2026-01-04" },
+            featured: true,
+            year: 2026
+        },
+        {
+            id: 16,
+            title: "Flutter Calculator",
+            description: "A Flutter-based calculator application with a modern UI and smooth animations.",
+            image: fluttercalculator,
+            technologies: ["Flutter", "Dart"],
+            github: "https://github.com/Anjana-Hesh/Flutter_Calculator.git",
+            live: "#",
+            category: "Frontend",
+            color: "from-blue-500 to-purple-500",
+            stats: { stars: 36, forks: 13, commits: 2, lastUpdated: "2025-12-31" },
+            featured: false,
+            year: 2026
+        },
+        {
+            id: 17,
+            title: "Seat Booking React",
+            description: "A React-based seat booking application with a modern UI and smooth animations.",
+            image: seatBookingReact,
+            technologies: ["React", "JavaScript"],
+            github: "https://github.com/Anjana-Hesh/Bus-Booking-web.git",
+            live: "#",
+            category: "Frontend",
+            color: "from-blue-500 to-purple-500",
+            stats: { stars: 36, forks: 13, commits: 26, lastUpdated: "2025-11-15" },
+            featured: true,
             year: 2025
         }
         
