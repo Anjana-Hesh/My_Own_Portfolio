@@ -106,11 +106,16 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
               
-              <button className="group px-8 py-4 border-2 border-purple-500/50 text-purple-400 rounded-full font-semibold hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 hover:scale-105 flex items-center gap-2">
+              <a
+                href="/Anjana_Heshan_CV4.pdf"
+                download="Anjana_Heshan_CV.pdf"
+                className="group relative px-8 py-4 border-2 border-purple-500/50 text-purple-400 rounded-full font-semibold hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 hover:scale-105 flex items-center gap-2"
+              >
                 <Download size={20} />
                 Download CV
                 <div className="w-0 group-hover:w-full h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 transition-all duration-300 absolute bottom-2 left-1/2 transform -translate-x-1/2"></div>
-              </button>
+              </a>
+
             </div>
 
             {/* Social Links */}
