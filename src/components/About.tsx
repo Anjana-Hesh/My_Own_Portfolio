@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Code, Database, Globe, Server, Zap, type LucideIcon , Atom,   Braces,
+import { Database, Globe, Server, Zap, type LucideIcon , Atom,   Braces,
   Coffee,
   Leaf,
   Layers,Smartphone,
