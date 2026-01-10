@@ -314,7 +314,7 @@ const AllProjects: React.FC<AllProjectsProps> = ({ onBackToProjects }) => {
     ];
 
     const categories = ["All", "Full Stack", "Web App", "Desktop App", "Mobile App"];
-    const years = ["All", "2025" ,"2024"];
+    const years = ["All", "2026", "2025" ,"2024"];
 
     const filteredProjects = allProjects.filter(project => {
         const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
