@@ -9,8 +9,10 @@ import {
     Youtube,
     Send,
     MapPin,
-    MessageSquare
+    MessageSquare,
+    BookOpen
 } from "lucide-react";
+import emailjs from '@emailjs/browser'; 
 
 interface FormDataState {
     name: string;
@@ -18,7 +20,7 @@ interface FormDataState {
     message: string;
 }
 
-type LucideIcon = typeof Mail | typeof Phone | typeof Linkedin | typeof Github | typeof Facebook | typeof Instagram | typeof Youtube | typeof MapPin;
+type LucideIcon = typeof Mail | typeof Phone | typeof Linkedin | typeof Github | typeof Facebook | typeof Instagram | typeof Youtube | typeof MapPin | typeof BookOpen;
 
 interface SocialLink {
     Icon: LucideIcon;
@@ -101,22 +103,53 @@ const Contact: FC = () => {
         });
     };
 
+    // const handleSubmit = (e: React.FormEvent) => {
+    //     e.preventDefault();
+    //     setIsSubmitting(true);
+
+    //     setTimeout(() => {
+    //         setIsSubmitting(false);
+    //         setFormData({ name: "", email: "", message: "" });
+            
+    //         setToastMessage("Message sent successfully! 🎉 I'll be in touch soon.");
+
+    //     }, 2000);
+    // };
+
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
 
-        setTimeout(() => {
+        const templateParams = {
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+            title: 'Portfolio Message',
+        };
+
+        emailjs.send(
+            'service_9ui6krj',
+            'template_16kfhe6',
+            templateParams,
+            'qn03ZZuFUWuC_cXSm' 
+        )
+        .then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
             setIsSubmitting(false);
             setFormData({ name: "", email: "", message: "" });
-            
             setToastMessage("Message sent successfully! 🎉 I'll be in touch soon.");
-
-        }, 2000);
+        })
+        .catch((err) => {
+            console.error('FAILED...', err);
+            setIsSubmitting(false);
+            alert("Something went wrong. Please try again later.");
+        });
     };
 
     const socialLinks: SocialLink[] = [
         { Icon: Linkedin, href: "https://www.linkedin.com/in/anjana-heshan-79334b260/", color: "from-blue-600 to-blue-700", hoverColor: "hover:shadow-blue-500/50", name: "LinkedIn" },
         { Icon: Github, href: "https://github.com/Anjana-Hesh", color: "from-gray-700 to-gray-800", hoverColor: "hover:shadow-gray-500/50", name: "GitHub" },
+        { Icon: BookOpen, href: "https://medium.com/@anjanaheshan676", color: "from-gray-800 to-black", hoverColor: "hover:shadow-gray-400/50", name: "Medium" },
         { Icon: Facebook, href: "https://web.facebook.com/anjana.heshan.353/?_rdc=1&_rdr#", color: "from-blue-500 to-blue-600", hoverColor: "hover:shadow-blue-400/50", name: "Facebook" },
         { Icon: Instagram, href: "https://www.instagram.com/_anjana_heshan_/", color: "from-pink-500 to-rose-600", hoverColor: "hover:shadow-pink-500/50", name: "Instagram" },
         { Icon: Youtube, href: "https://www.youtube.com/@anjanaheshan3994", color: "from-red-500 to-red-600", hoverColor: "hover:shadow-red-500/50", name: "YouTube" }
